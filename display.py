@@ -1,0 +1,10 @@
+import cv2
+image=cv2.imread("squidward.png")
+print(image)
+#cv2.namedWindow("Loaded image (not processed)", cv2.WINDOW_NORMAL)
+#cv2.resizeWindow("loaded image", 500, 500)
+gray=cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+resize=cv2.resize(gray, (244, 448))
+cv2.imshow("Loaded image.", resize)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
